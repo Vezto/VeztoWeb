@@ -1,0 +1,313 @@
+@font-face {
+	font-family: Circular_Black;
+	src: url(Fonts/Circular_Black.otf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Circular_Bold;
+	src: url(Fonts/Circular_Bold.otf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Circular_Book;
+	src: url(Fonts/Circular_Book.otf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Circular_Medium;
+	src: url(Fonts/Circular_Medium.otf);
+	font-weight: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+	height: auto;
+}
+
+.underline-link:link,
+.underline-link:visited {
+	color: #fff;
+	border-bottom: 2px solid transparent;
+	-webkit-transition: border 500ms ease;
+	transition: border 500ms ease;
+}
+
+.underline-link:hover,
+.underline-link:active {
+	border-bottom: 2px solid #fff;
+}
+
+html,
+body {
+	margin: 0;
+	background-color: #fff;
+	color: #000;
+	font-family: 'Circular_Black', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+section {
+	padding: 30px 0;
+	height: auto;
+}
+
+header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Images/Japan4k-blured.png);
+	background-size: cover;
+	background-position: center;
+	height: 75vh;
+	background-attachment: fixed;
+}
+
+.hero-text-box {
+	position: absolute;
+	width: 1140px;
+	top: 30%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(50%, 0);
+	transform: translate(-50%, 0);
+}
+
+header h1 {
+	margin-top: 2px;
+	color: #fff
+}
+
+.logo {
+	height: 60px;
+	width: auto;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+
+.section-about {
+	font-family: 'Circular_Medium', sans-serif;
+	font-weight: bold;
+}
+
+.section-about .row .col {
+	margin: 0 15px;
+}
+
+.section-about .row .col:nth-child(1) {
+	width: auto;
+}
+
+.logo-black {
+	height: 340px;
+	width: 340px;
+	;
+	float: left;
+}
+
+h3 {
+	padding-top: 80px;
+	float: left;
+	font-size: 280%;
+	text-transform: none;
+}
+
+p {
+	font-family: 'Circular_Book', sans-serif;
+	float: left;
+	text-transform: none;
+	text-align: left;
+	font-size: 120%;
+	width: 90%;
+	margin-top: 13px;
+}
+
+.section-art-gallery {
+	background-image: url(Images/Party-Wallpaper.png);
+	background-size: cover;
+	background-position: center;
+	height: auto;
+	background-attachment: fixed;
+}
+
+.image-grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	max-width: 80%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.image-grid__item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-flex: 0;
+	-ms-flex-positive: 0;
+	flex-grow: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	-ms-flex-preferred-size: 460px;
+	flex-basis: 460px;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: relative;
+	height: 420px;
+	margin-right: 14px;
+	margin-bottom: 14px;
+	-webkit-transition: text-shadow 0.1s ease-in, -webkit-transform 0.14s ease-in;
+	transition: text-shadow 0.1s ease-in, -webkit-transform 0.14s ease-in;
+	transition: transform 0.14s ease-in, text-shadow 0.1s ease-in;
+	transition: transform 0.14s ease-in, text-shadow 0.1s ease-in, -webkit-transform 0.14s ease-in;
+}
+
+.image-grid__item:before {
+	content: "";
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: none;
+	border-radius: 3px;
+	box-shadow: 0 10px 24px 0px rgba(0, 0, 0, 0.06), 0 8px 20px -2px rgba(0, 0, 0, 0.1), 0 6px 10px -6px rgba(0, 0, 0, 0.2);
+	-webkit-transition: visibility 0.1s ease-out, opacity 0.1s ease-out;
+	transition: visibility 0.1s ease-out, opacity 0.1s ease-out;
+	opacity: 0;
+}
+
+.image-grid__item:hover:before {
+	visibility: visible;
+	opacity: 1;
+}
+
+.grid-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-ms-flex-negative: 1;
+	flex-shrink: 1;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #eee;
+	overflow: hidden;
+}
+
+.grid-item:hover .grid-item__image {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.grid-item:hover .grid-item__hover {
+	visibility: visible;
+	opacity: 1;
+}
+
+.grid-item__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center;
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
+	will-change: transform;
+	-webkit-transition: -webkit-transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition: -webkit-transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	z-index: 0;
+}
+
+.grid-item__hover {
+	visibility: hidden;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.15);
+	border-radius: 0;
+	-webkit-transition: visibility 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition: visibility 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	opacity: 0;
+}
+
+footer {
+	padding: 10px;
+	width: 100%;
+	background-color: #313131;
+	height: auto;
+}
+
+footer p {
+	width: 100%;
+	font-size: 100%;
+	text-align: center;
+	margin-bottom: 15px;
+	color: #fff;
+}
+
+footer a img {
+	height: 40px;
+	width: 40px;
+	transition: transform 0.2s;
+}
+
+footer a img:hover {
+	transform: scale(1.13);
+}
